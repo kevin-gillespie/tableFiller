@@ -40,7 +40,7 @@ pyautogui.moveTo(int(xLocation), int(yLocation), duration = 1)
 if(args.test):
 	sys.exit(0)
 
-with open('sampleTable.csv', newline='') as csvfile:
+with open(args.tablefile, newline='') as csvfile:
 	csvReader = csv.reader(csvfile, delimiter=',', quotechar='|')
 	rowCount = 0
 	for row in csvReader:
