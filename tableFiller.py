@@ -1,10 +1,17 @@
+#!/usr/bin/env python3
+
+import sys
 import pyautogui
 import csv
 import argparse
-import sys
 from os.path import exists
 from time import sleep
 import signal
+
+# Check python version
+if sys.version_info[0] < 3:
+    print("Requires at least python 3.")
+    sys.exit(0)
 
 # Catch ctrl-c
 def handler(signum, frame):
