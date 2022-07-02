@@ -92,18 +92,13 @@ with open(args.tablefile, newline='') as csvfile:
         # Delay between rows
         if(args.delay != None):
             sleep(float(args.delay))
-        else:
-            sleep(0.01)
 
         print(row)
 
         for item in row:
             pyautogui.typewrite(item)
-            pyautogui.keyDown('tab')
-            pyautogui.keyUp('tab')
+            pyautogui.press('tab')
 
         rowCount = rowCount + 1
 
 sys.exit(0)
-
-
